@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
 //
 
+#import "BNRItemsViewController.h"
 #import "BNRAppDelegate.h"
 
 @implementation BNRAppDelegate
@@ -14,6 +15,13 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    //Create a BNRItemsViewController
+    BNRItemsViewController *itemsViewController = [[BNRItemsViewController alloc]init];
+    
+    // Place BNRItemViewController's table view in the window hierarchy
+    self.window.rootViewController = itemsViewController;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
